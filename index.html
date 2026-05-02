@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jassy.ai | Anonymous AI</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME8WW94276"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ME8WW94276');
+
+      function trackBetaClick() {
+          gtag('event', 'beta_access_click', {'event_category': 'Engagement', 'event_label': 'Replit Redirect'});
+          setTimeout(function() { window.location.href = "https://jassyai--arabi1nesupport.replit.app/"; }, 500);
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; background-color: #020202; color: #d1d5db; margin: 0; overflow-x: hidden; }
+        .matrix-green { color: #00FF41; }
+        .tech-font { font-family: 'JetBrains Mono', monospace; }
+        .glow-text { text-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
+        
+        #matrix { position: fixed; top: 0; left: 0; z-index: 1; opacity: 0.12; pointer-events: none; }
+        
+        .btn-active { background: linear-gradient(90deg, #00FF41, #008F11); color: black; padding: 1rem 2.5rem; font-weight: 900; border-radius: 4px; cursor: pointer; transition: 0.3s; }
+        .btn-active:hover { transform: scale(1.05); box-shadow: 0 0 20px #00FF41; }
+        
+        .feature-card { background: rgba(10, 10, 10, 0.8); border: 1px solid rgba(0, 255, 65, 0.1); transition: 0.3s; }
+        .feature-card:hover { border-color: #00FF41; box-shadow: 0 0 15px rgba(0, 255, 65, 0.1); }
+
+        /* Scroll Indicator */
+        .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite; z-index: 20; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);} 40% {transform: translateY(-10px) translateX(-50%);} 60% {transform: translateY(-5px) translateX(-50%);} }
+    </style>
+</head>
+<body>
+
+    <canvas id="matrix"></canvas>
+
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-[#00FF41]/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center tech-font">
+            <div class="font-bold text-xl text-white">JASSY<span class="matrix-green">.AI</span></div>
+            <div class="flex gap-2">
+                <span class="lang-btn active p-1 cursor-pointer text-[10px] border border-transparent hover:border-[#00FF41]" onclick="changeLang('ar')">AR</span>
+                <span class="lang-btn p-1 cursor-pointer text-[10px] border border-transparent hover:border-[#00FF41]" onclick="changeLang('dar')">DAR</span>
+                <span class="lang-btn p-1 cursor-pointer text-[10px] border border-transparent hover:border-[#00FF41]" onclick="changeLang('en')">EN</span>
+                <span class="lang-btn p-1 cursor-pointer text-[10px] border border-transparent hover:border-[#00FF41]" onclick="changeLang('es')">ES</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center text-center px-6 z-10">
+        <div class="max-w-4xl">
+            <div class="mb-4 inline-block px-3 py-1 border border-[#00FF41] text-[#00FF41] text-[10px] tech-font uppercase tracking-widest">
+                <span id="live-users">142</span> Anonymous users online
+            </div>
+            <h1 id="h-title" class="text-6xl md:text-8xl font-black text-white mb-6 glow-text uppercase leading-none">
+                خصوصيتك <br> <span class="matrix-green">هي قوتنا</span>
+            </h1>
+            <p id="h-desc" class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                أول ذكاء اصطناعي مغربي يحمي هويتك. لا تسجيل، لا تتبع، فقط خصوصية مطلقة.
+            </p>
+            <button onclick="trackBetaClick()" class="btn-active tech-font text-lg uppercase mb-8" id="btn-text">
+                ACCESS BETA NOW
+            </button>
+            
+            <div class="flex justify-center gap-6 opacity-60">
+                <a href="https://www.tiktok.com/@jassyai" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="20" class="invert"></a>
+                <a href="https://www.instagram.com/jassyai1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="20" class="invert"></a>
+                <a href="mailto:jassyaiteam@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="20" class="invert"></a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator flex flex-col items-center">
+            <span class="text-[9px] tech-font text-white/40 mb-2 uppercase tracking-widest" id="scroll-text">Scroll Down | هبط لتحت</span>
+            <div class="w-[1px] h-10 bg-gradient-to-b from-[#00FF41] to-transparent"></div>
+        </div>
+    </section>
+
+    <section id="system" class="relative min-h-screen bg-[#030303]/80 py-24 z-10 flex flex-col justify-center">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 id="sys-title" class="text-4xl font-black text-white mb-16 tech-font text-center uppercase tracking-tighter">
+                Security & <span class="matrix-green">Economy</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="feature-card p-10 rounded-xl">
+                    <h3 id="f1-t" class="matrix-green font-bold text-xl mb-4 uppercase">Fingerprint Auth</h3>
+                    <p id="f1-d" class="text-sm text-gray-400 leading-relaxed">
+                        لا نحتاج لبريدك الإلكتروني. نستخدم بصمة المتصفح (Fingerprint) لربط حسابك بجهازك فقط. إذا لم نملك بياناتك، لا يمكننا بيعها.
+                    </p>
+                </div>
+                <div class="feature-card p-10 rounded-xl">
+                    <h3 id="f2-t" class="matrix-green font-bold text-xl mb-4 uppercase">JassyCoin (JSY)</h3>
+                    <p id="f2-d" class="text-gray-400 text-sm leading-relaxed">
+                        نظام رصيد عادل. <span class="text-white font-bold">Freemium:</span> شاهد إعلان واربح رصيد. <span class="text-white font-bold">Premium:</span> دفع ساهل وآمن (CashPlus / Orange Money) للحصول على رصيد لا محدود.
+                    </p>
+                </div>
+            </div>
+            <p id="f-note" class="text-center text-[10px] text-gray-600 mt-12 max-w-lg mx-auto leading-loose italic">
+                * نطلب الـ Gmail فقط في حالة الاشتراك لإرسال الفاتورة وكود الاسترجاع. ننصح باستخدام حساب جديد تماماً لضمان أمانك.
+            </p>
+        </div>
+    </section>
+
+    <section id="creator" class="relative min-h-screen py-24 z-10 flex items-center">
+        <div class="max-w-4xl mx-auto px-6 w-full">
+            <div class="bg-gradient-to-br from-zinc-900 to-black p-10 md:p-20 border border-[#00FF41]/20 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 tech-font text-8xl font-black select-none">CREATOR</div>
+                
+                <h2 class="text-xs matrix-green tech-font mb-4 uppercase tracking-[0.3em]">The Artist & Developer</h2>
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-8 leading-none">JASSIR <br> BOUTAFFAH</h1>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <p id="c-desc" class="text-gray-300 leading-relaxed text-sm">
+                            جاسر بوتفاح، 21 سنة. مبرمج ومصمم جرافيك وفنان تشكيلي. أؤمن أن التكنولوجيا فن، وأن الكود هو ريشتي الجديدة.
+                        </p>
+                    </div>
+                    <div class="border-l border-[#00FF41]/30 pl-8">
+                        <h3 id="c-legacy-t" class="text-white font-bold mb-4 uppercase text-xs tracking-widest">إرث فني</h3>
+                        <p id="c-legacy-d" class="text-gray-400 text-xs italic leading-relaxed">
+                            "Jassy.ai هو امتداد لإرث والدي، الفنان التشكيلي المغربي <span class="text-white font-bold">عربي بوتفاح</span> (رحمه الله). أحول فنه إلى لغة رقمية تحمي خصوصية المغاربة."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative z-10 py-10 text-center border-t border-white/5 bg-black px-6">
+        <p class="text-[9px] tech-font text-gray-500 uppercase tracking-widest">
+            © 2026 JASSY.AI | Founder: Jassir Boutaffah | jassyaiteam@gmail.com
+        </p>
+    </footer>
+
+    <script>
+        // نظام اللغات
+        const translations = {
+            ar: { dir: "rtl", title: "خصوصيتك <br> <span class='matrix-green'>هي قوتنا</span>", desc: "أول ذكاء اصطناعي مغربي يحمي هويتك. لا تسجيل، لا تتبع، فقط خصوصية مطلقة.", btn: "دخول للنسخة التجريبية", scroll: "هبط لتحت | Scroll Down", systitle: "الأمان و <span class='matrix-green'>الاقتصاد</span>", f1t: "بصمة الجهاز (Fingerprint)", f1d: "لا نحتاج لبريدك الإلكتروني. نستخدم بصمة المتصفح لربط حسابك بجهازك فقط. إذا لم نملك بياناتك، لا يمكننا بيعها.", f2t: "JassyCoin (JSY)", f2d: "نظام رصيد عادل. Freemium: شاهد إعلان واربح رصيد. Premium: دفع ساهل وآمن (CashPlus / Orange Money) للحصول على رصيد لا محدود.", fnote: "* نطلب الـ Gmail فقط في حالة الاشتراك لإرسال الفاتورة وكود الاسترجاع. ننصح باستخدام حساب جديد تماماً لضمان أمانك.", cdesc: "جاسر بوتفاح، 21 سنة. مبرمج ومصمم جرافيك وفنان تشكيلي. أؤمن أن التكنولوجيا فن، وأن الكود هو ريشتي الجديدة.", clegt: "إرث فني", clegd: "Jassy.ai هو امتداد لإرث والدي، الفنان التشكيلي المغربي عربي بوتفاح (رحمه الله). أحول فنه إلى لغة رقمية تحمي خصوصية المغاربة." },
+            dar: { dir: "rtl", title: "الخصوصية ديالك <br> <span class='matrix-green'>هي الساروت</span>", desc: "أول ذكاء اصطناعي مغربي كيحمي هويتك. بلا تسجيل، بلا تتبع، غير الخصوصية ديالك.", btn: "جرب دابا | Beta Access", scroll: "زيد هبط لتحت", systitle: "الأمان و <span class='matrix-green'>السيولة</span>", f1t: "بصمة الجهاز (Fingerprint)", f1d: "مانطلبوش ليك الإيميل. كنخدمو بالبصمة ديال التيليفون باش نعقلوا عليك. لي ماعندناش مانقدروش نبيعوه.", f2t: "JassyCoin (JSY)", f2d: "نظام كريدي ساهل. Freemium: تفرج فإشهار وربح رصيد. Premium: خلاص مغربي (CashPlus / Orange Money) باش تخدم بلا حساب.", fnote: "* كنطلبوا الجيمايل غير يلا خلصتي باش نصيفطوا ليك الفاتورة وكود الاسترجاع. خدم بجيمايل جديد باش تبقى هاني.", cdesc: "جاسر بوتفاح، 21 عام. مبرمج وديزاينر ورسام. كنشوف الكود بحال الريشة ديال الرسم.", clegt: "إرث بوتفاح", clegd: "Jassy.ai هو تكريم للوالد ديالي الفنان التشكيلي عربي بوتفاح الله يرحمه. كنحول الفن ديالو لذكاء اصطناعي كيحمي المغاربة." },
+            en: { dir: "ltr", title: "YOUR PRIVACY <br> <span class='matrix-green'>IS OUR POWER</span>", desc: "The first Moroccan AI that protects your identity. No registration, no tracking, just absolute privacy.", btn: "ACCESS BETA NOW", scroll: "Scroll Down", systitle: "Security & <span class='matrix-green'>Economy</span>", f1t: "Fingerprint Auth", f1d: "No emails needed. We use your browser's fingerprint to secure your session. If we don't own your data, we can't sell it.", f2t: "JassyCoin (JSY)", f2d: "Credit system. Freemium: Watch ads to earn JSY. Premium: Easy local payments (CashPlus / Orange Money) for unlimited access.", fnote: "* Gmail is only required for Premium billing. We recommend using a fresh account for maximum security.", cdesc: "Jassir Boutaffah, 21. Developer, Designer, and Painter. I believe technology is art, and code is my new brush.", clegt: "Artistic Legacy", clegd: "Jassy.ai is an extension of my late father’s legacy, the Moroccan artist Arbi Boutaffah. I transform his art into a digital tool for privacy." },
+            es: { dir: "ltr", title: "TU PRIVACIDAD <br> <span class='matrix-green'>NUESTRO PODER</span>", desc: "La primera IA marroquí que protege tu identidad. Sin registro, sin rastreo, solo privacidad absoluta.", btn: "ACCEDER AHORA", scroll: "Desliza hacia abajo", systitle: "Seguridad y <span class='matrix-green'>Economía</span>", f1t: "Tecnología Fingerprint", f1d: "No pedimos emails. Usamos la huella digital de tu dispositivo. Lo que no poseemos, no lo podemos vender.", f2t: "JassyCoin (JSY)", f2d: "Sistema de crédito. Freemium: Mira anuncios para ganar JSY. Premium: Pagos locales (CashPlus) para acceso ilimitado.", fnote: "* Solo pedimos Gmail para facturación. Recomendamos usar una cuenta nueva para mayor seguridad.", cdesc: "Jassir Boutaffah, 21. Desarrollador, Diseñador y Pintor. El código es mi nueva forma de arte.", clegt: "Legado Artístico", clegd: "Jassy.ai es una extensión del legado de mi padre, el artista marroquí Arbi Boutaffah. Transformo su arte en privacidad digital." }
+        };
+
+        function changeLang(lang) {
+            const t = translations[lang];
+            document.body.dir = t.dir;
+            document.getElementById('h-title').innerHTML = t.title;
+            document.getElementById('h-desc').innerText = t.desc;
+            document.getElementById('btn-text').innerText = t.btn;
+            document.getElementById('scroll-text').innerText = t.scroll;
+            document.getElementById('sys-title').innerHTML = t.systitle;
+            document.getElementById('f1-t').innerText = t.f1t; document.getElementById('f1-d').innerText = t.f1d;
+            document.getElementById('f2-t').innerText = t.f2t; document.getElementById('f2-d').innerText = t.f2d;
+            document.getElementById('f-note').innerText = t.fnote;
+            document.getElementById('c-desc').innerText = t.cdesc;
+            document.getElementById('c-legacy-t').innerText = t.clegt;
+            document.getElementById('c-legacy-d').innerText = t.clegd;
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            if(event) event.target.classList.add('active');
+        }
+
+        // Matrix Background
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize); resize();
+        const alphabet = '01'; const fontSize = 16; const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00FF41'; ctx.font = fontSize + 'px monospace';
+            for (let i = 0; i < drops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 35);
+
+        // Fake Counter
+        setInterval(() => {
+            document.getElementById('live-users').innerText = Math.floor(Math.random() * (180 - 110) + 110);
+        }, 3000);
+    </script>
+</body>
+</html>
