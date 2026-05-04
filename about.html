@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Jassy.ai</title>
+    <meta name="description" content="تعرف على Jassy.ai ورؤية المؤسس جاسر بوتفاح في دمج الفن بالتكنولوجيا المتقدمة.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME8WW94276"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ME8WW94276');</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>body{font-family:'Cairo',sans-serif;background-color:#020202;color:#d1d5db;margin:0;overflow-x:hidden;}.matrix-green{color:#00FF41;}.tech-font{font-family:'JetBrains Mono',monospace;}#matrix{position:fixed;top:0;left:0;z-index:-1;opacity:0.15;pointer-events:none;}.content-card{background:rgba(10,10,10,0.85);border:1px solid rgba(0,255,65,0.2);backdrop-filter:blur(10px);}</style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-[#00FF41]/10">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center tech-font">
+            <a href="index.html" class="font-bold text-2xl text-white tracking-widest hover:text-[#00FF41] transition">JASSY<span class="matrix-green">.AI</span></a>
+            <div class="flex gap-2">
+                <button onclick="changeLang('ar')" class="text-[10px] border border-[#00FF41] px-2 py-1 text-[#00FF41] hover:bg-[#00FF41] hover:text-black">AR</button>
+                <button onclick="changeLang('en')" class="text-[10px] border border-[#00FF41] px-2 py-1 text-[#00FF41] hover:bg-[#00FF41] hover:text-black">EN</button>
+            </div>
+            <a href="index.html" id="nav-back" class="text-xs uppercase border border-[#00FF41] px-4 py-2 text-[#00FF41] hover:bg-[#00FF41] hover:text-black transition">العودة للرئيسية</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <div class="content-card p-8 md:p-12 rounded-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-5 tech-font text-8xl font-black select-none">ABOUT</div>
+            <h1 id="page-title" class="text-4xl font-black text-white mb-8 uppercase tracking-widest glow-text">من <span class="matrix-green">نحن</span></h1>
+
+            <div class="space-y-8 text-sm leading-loose text-gray-300 relative z-10">
+                <section>
+                    <h2 id="s1-t" class="text-xl font-bold text-white mb-4 matrix-green">المهمة والسيادة الرقمية</h2>
+                    <div id="s1-d"><p>انطلقنا من المغرب بمبدأ واضح: الخصوصية حق. نحن نعمل على بناء الذكاء الاصطناعي الأول الذي يعيد للمستخدم سيادته الرقمية بتقنية GhostMode. نستخدم حالياً أحدث واجهات الـ APIs العالمية لتشغيل منصتنا، مع خطة لبناء خوادم سيادية خاصة بنا في المستقبل.</p></div>
+                </section>
+                <section class="border-[#00FF41] my-8" id="s2-border" style="border-right-width: 2px; padding-right: 1.5rem;">
+                    <h2 id="s2-t" class="text-xl font-bold text-white mb-4 matrix-green">المؤسس والإرث الفني</h2>
+                    <div id="s2-d"><p>تأسست المنصة على يد <strong>جاسر بوتفاح</strong>. Jassy.ai ليست مجرد منصة تجارية، بل هي امتداد حي للإرث الفني للراحل <strong>محمد العربي بوتفاح</strong>. نحن نحول إبداعاته التي تحترم الإنسان إلى خوارزميات تحمي هوية الإنسان الرقمية.</p></div>
+                </section>
+                <section>
+                    <h2 id="s3-t" class="text-xl font-bold text-white mb-4 matrix-green">التواصل والمجتمع</h2>
+                    <div id="s3-d">
+                        <ul class="list-none mt-4 space-y-2 tech-font">
+                            <li><span class="text-white">Email:</span> <a href="mailto:jassyaiteam@gmail.com" class="text-[#00FF41] hover:underline">jassyaiteam@gmail.com</a></li>
+                            <li><span class="text-white">TikTok:</span> <a href="https://www.tiktok.com/@jassyai" target="_blank" class="text-[#00FF41] hover:underline">@jassyai</a></li>
+                            <li><span class="text-white">Instagram:</span> <a href="https://www.instagram.com/jassyai1" target="_blank" class="text-[#00FF41] hover:underline">@jassyai1</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const langData = {
+            ar: {
+                dir: "rtl", back: "العودة للرئيسية", title: "من <span class='matrix-green'>نحن</span>", bdir: "right",
+                s1t: "المهمة والسيادة الرقمية", s1d: "<p>انطلقنا من المغرب بمبدأ واضح: الخصوصية حق. نحن نعمل على بناء الذكاء الاصطناعي الأول الذي يعيد للمستخدم سيادته الرقمية بتقنية GhostMode مع خطط لنماذج سيادية مستقبلية.</p>",
+                s2t: "المؤسس والإرث الفني", s2d: "<p>تأسست المنصة على يد <strong>جاسر بوتفاح</strong>. المنصة هي تجسيد رقمي وإرث مستمر للفنان التشكيلي المغربي الراحل <strong>محمد العربي بوتفاح</strong>.</p>",
+                s3t: "التواصل والمجتمع", s3d: "<ul class='list-none mt-4 space-y-2 tech-font'><li><span class='text-white'>Email:</span> <a href='mailto:jassyaiteam@gmail.com' class='text-[#00FF41] hover:underline'>jassyaiteam@gmail.com</a></li><li><span class='text-white'>TikTok:</span> <a href='https://www.tiktok.com/@jassyai' target='_blank' class='text-[#00FF41] hover:underline'>@jassyai</a></li><li><span class='text-white'>Insta:</span> <a href='https://www.instagram.com/jassyai1' target='_blank' class='text-[#00FF41] hover:underline'>@jassyai1</a></li></ul>"
+            },
+            en: {
+                dir: "ltr", back: "BACK TO HOME", title: "ABOUT <span class='matrix-green'>US</span>", bdir: "left",
+                s1t: "Mission & Digital Sovereignty", s1d: "<p>We started from Morocco with a clear principle: Privacy is a right. We use GhostMode to protect identity and plan to deploy proprietary sovereign models in the future.</p>",
+                s2t: "Founder & Artistic Legacy", s2d: "<p>Founded by <strong>Jassir Boutaffah</strong>, Jassy.ai is the digital embodiment of the late Moroccan artist <strong>Mohammed Arbi Boutaffah's</strong> legacy.</p>",
+                s3t: "Contact & Community", s3d: "<ul class='list-none mt-4 space-y-2 tech-font'><li><span class='text-white'>Email:</span> <a href='mailto:jassyaiteam@gmail.com' class='text-[#00FF41] hover:underline'>jassyaiteam@gmail.com</a></li><li><span class='text-white'>TikTok:</span> <a href='https://www.tiktok.com/@jassyai' target='_blank' class='text-[#00FF41] hover:underline'>@jassyai</a></li><li><span class='text-white'>Insta:</span> <a href='https://www.instagram.com/jassyai1' target='_blank' class='text-[#00FF41] hover:underline'>@jassyai1</a></li></ul>"
+            }
+        };
+        function changeLang(l) {
+            const d = langData[l] || langData['en'];
+            document.body.dir = d.dir; document.getElementById('nav-back').innerText = d.back;
+            document.getElementById('page-title').innerHTML = d.title;
+            document.getElementById('s1-t').innerText = d.s1t; document.getElementById('s1-d').innerHTML = d.s1d;
+            document.getElementById('s2-t').innerText = d.s2t; document.getElementById('s2-d').innerHTML = d.s2d;
+            document.getElementById('s3-t').innerText = d.s3t; document.getElementById('s3-d').innerHTML = d.s3d;
+            document.getElementById('s2-border').style.borderRightWidth = d.bdir === 'right' ? '2px' : '0';
+            document.getElementById('s2-border').style.borderLeftWidth = d.bdir === 'left' ? '2px' : '0';
+            document.getElementById('s2-border').style.paddingRight = d.bdir === 'right' ? '1.5rem' : '0';
+            document.getElementById('s2-border').style.paddingLeft = d.bdir === 'left' ? '1.5rem' : '0';
+        }
+        const c=document.getElementById('matrix'),ctx=c.getContext('2d');function r(){c.width=window.innerWidth;c.height=window.innerHeight;}window.addEventListener('resize',r);r();const a='01',f=16,col=c.width/f,dr=Array(Math.floor(col)).fill(1);function draw(){ctx.fillStyle='rgba(0,0,0,0.05)';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#00FF41';ctx.font=f+'px monospace';for(let i=0;i<dr.length;i++){const t=a.charAt(Math.floor(Math.random()*a.length));ctx.fillText(t,i*f,dr[i]*f);if(dr[i]*f>c.height&&Math.random()>0.975)dr[i]=0;dr[i]++;}}setInterval(draw,35);
+    </script>
+</body>
+</html>
