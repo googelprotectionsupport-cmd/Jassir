@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Jassy.ai</title>
+    <meta name="description" content="شروط الاستخدام والأحكام القانونية لمنصة Jassy.ai ونظام JassyCoin.">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME8WW94276"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ME8WW94276');</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>body{font-family:'Cairo',sans-serif;background-color:#020202;color:#d1d5db;margin:0;overflow-x:hidden;}.matrix-green{color:#00FF41;}.tech-font{font-family:'JetBrains Mono',monospace;}#matrix{position:fixed;top:0;left:0;z-index:-1;opacity:0.15;pointer-events:none;}.content-card{background:rgba(10,10,10,0.85);border:1px solid rgba(0,255,65,0.2);backdrop-filter:blur(10px);}</style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-[#00FF41]/10">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center tech-font">
+            <a href="index.html" class="font-bold text-2xl text-white tracking-widest hover:text-[#00FF41] transition">JASSY<span class="matrix-green">.AI</span></a>
+            <div class="flex gap-2">
+                <button onclick="changeLang('ar')" class="text-[10px] border border-[#00FF41] px-2 py-1 text-[#00FF41] hover:bg-[#00FF41] hover:text-black">AR</button>
+                <button onclick="changeLang('en')" class="text-[10px] border border-[#00FF41] px-2 py-1 text-[#00FF41] hover:bg-[#00FF41] hover:text-black">EN</button>
+            </div>
+            <a href="index.html" id="nav-back" class="text-xs uppercase border border-[#00FF41] px-4 py-2 text-[#00FF41] hover:bg-[#00FF41] hover:text-black transition">العودة للرئيسية</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
+        <div class="content-card p-8 md:p-12 rounded-xl">
+            <h1 id="page-title" class="text-4xl font-black text-white mb-2 uppercase tracking-widest glow-text">شروط <span class="matrix-green">الاستخدام</span></h1>
+            <p id="page-date" class="text-xs text-gray-500 tech-font mb-10">الإصدار المحدث: مايو 2026</p>
+
+            <div class="space-y-8 text-sm leading-loose text-gray-300">
+                <section>
+                    <h2 id="s1-t" class="text-xl font-bold text-white mb-4 matrix-green">1. القبول والالتزام بالشروط</h2>
+                    <div id="s1-d"><p>باستخدامك لمنصة Jassy.ai، فإنك توافق على الامتثال لهذه الشروط. يُمنع استخدام المنصة لتوليد برمجيات خبيثة أو محتوى يخالف القوانين.</p></div>
+                </section>
+                <section>
+                    <h2 id="s2-t" class="text-xl font-bold text-white mb-4 matrix-green">2. نظام الاقتصاد الداخلي (JassyCoin - JSY)</h2>
+                    <div id="s2-d"><p>تعمل منصتنا بنظام JassyCoin. نوفر خيارين: <strong>الخطة المجانية (Freemium)</strong> تعتمد على مشاهدة الإعلانات للحصول على رصيد. <strong>الخطة المدفوعة (Premium)</strong> باشتراك شهري ($5) تمنحك وصولاً غير محدود دون إعلانات عبر بوابات الدفع (Visa, CashPlus).</p></div>
+                </section>
+                <section>
+                    <h2 id="s3-t" class="text-xl font-bold text-white mb-4 matrix-green">3. حقوق الملكية الفكرية والإرث الفني</h2>
+                    <div id="s3-d"><p>المشروع يستلهم روح الإرث الفني للراحل محمد العربي بوتفاح. يمنع استنساخ أو إعادة استخدام الهوية البصرية والمفاهيم الرقمية دون تصريح كتابي من الإدارة والمؤسس جاسر بوتفاح.</p></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const langData = {
+            ar: {
+                dir: "rtl", back: "العودة للرئيسية", title: "شروط <span class='matrix-green'>الاستخدام</span>", date: "الإصدار المحدث: مايو 2026",
+                s1t: "1. القبول والالتزام بالشروط", s1d: "<p>باستخدامك لمنصة Jassy.ai، فإنك توافق على الامتثال لهذه الشروط. يُمنع استخدام المنصة لتوليد برمجيات خبيثة أو محتوى يخالف القوانين.</p>",
+                s2t: "2. نظام الاقتصاد الداخلي (JassyCoin - JSY)", s2d: "<p>تعمل منصتنا بنظام JassyCoin. الخطة المجانية (Freemium) تعتمد على الإعلانات. الخطة المدفوعة (Premium) باشتراك شهري ($5) عبر Visa أو CashPlus تمنحك وصولاً غير محدود.</p>",
+                s3t: "3. حقوق الملكية الفكرية والإرث الفني", s3d: "<p>المشروع يجسد الإرث الفني للراحل محمد العربي بوتفاح. يُمنع استنساخ الواجهات والهوية البصرية لمنصة Jassy.ai.</p>"
+            },
+            en: {
+                dir: "ltr", back: "BACK TO HOME", title: "TERMS OF <span class='matrix-green'>USE</span>", date: "Updated: May 2026",
+                s1t: "1. Acceptance of Terms", s1d: "<p>By using Jassy.ai, you agree to these terms. Generating malicious software or illegal content is strictly prohibited.</p>",
+                s2t: "2. Economy System (JassyCoin - JSY)", s2d: "<p>We operate on JassyCoin. The Freemium tier is ad-supported. The Premium tier ($5/mo) provides unlimited access via secure payment gateways.</p>",
+                s3t: "3. Intellectual Property & Artistic Legacy", s3d: "<p>The project honors the artistic legacy of the late Mohammed Arbi Boutaffah. Copying our UI or digital concepts is strictly prohibited.</p>"
+            }
+        };
+        function changeLang(l) {
+            const d = langData[l] || langData['en'];
+            document.body.dir = d.dir; document.getElementById('nav-back').innerText = d.back;
+            document.getElementById('page-title').innerHTML = d.title; document.getElementById('page-date').innerText = d.date;
+            document.getElementById('s1-t').innerText = d.s1t; document.getElementById('s1-d').innerHTML = d.s1d;
+            document.getElementById('s2-t').innerText = d.s2t; document.getElementById('s2-d').innerHTML = d.s2d;
+            document.getElementById('s3-t').innerText = d.s3t; document.getElementById('s3-d').innerHTML = d.s3d;
+        }
+        const c=document.getElementById('matrix'),ctx=c.getContext('2d');function r(){c.width=window.innerWidth;c.height=window.innerHeight;}window.addEventListener('resize',r);r();const a='01',f=16,col=c.width/f,dr=Array(Math.floor(col)).fill(1);function draw(){ctx.fillStyle='rgba(0,0,0,0.05)';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#00FF41';ctx.font=f+'px monospace';for(let i=0;i<dr.length;i++){const t=a.charAt(Math.floor(Math.random()*a.length));ctx.fillText(t,i*f,dr[i]*f);if(dr[i]*f>c.height&&Math.random()>0.975)dr[i]=0;dr[i]++;}}setInterval(draw,35);
+    </script>
+</body>
+</html>
